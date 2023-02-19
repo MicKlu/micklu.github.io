@@ -1,0 +1,31 @@
+@use "variables.scss" as vars;
+
+$navHeight: 4rem;
+
+nav {
+  width: 100vw;
+  background: vars.$colorPrimary;
+  padding: 0 10rem;
+  box-shadow: 0 0 10px black;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    li {
+      height: $navHeight;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
+  }
+
+  &.floating {
+    position: fixed;
+    z-index: 100;
+  }
+}

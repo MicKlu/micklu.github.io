@@ -1,0 +1,1 @@
+nav{width:100vw;background:#2e2e4a;padding:0 10rem;box-shadow:0 0 10px #000;display:flex;justify-content:space-between}nav ul{list-style:none;display:flex;justify-content:center}nav ul li{height:4rem;padding:0 1.5rem;display:flex;align-items:center;text-transform:uppercase}nav.floating{position:fixed;z-index:100}/*# sourceMappingURL=Nav.css.map */

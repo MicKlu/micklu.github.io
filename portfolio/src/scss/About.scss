@@ -1,0 +1,25 @@
+@use "App.scss";
+
+#left-pane {
+  @extend .container;
+
+  flex: 3;
+}
+
+#right-pane {
+  @extend .container;
+
+  flex: 9;
+}
+
+#education-section,
+#qualifications-section {
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+}

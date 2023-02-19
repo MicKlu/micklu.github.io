@@ -1,0 +1,27 @@
+#projects-gallery-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 0.5rem;
+
+  article.project {
+    border: 1px solid gray;
+    border-radius: 0.25rem;
+    max-width: calc((100% - 1rem) / 3);
+    overflow: hidden;
+
+    header {
+      figure {
+        height: 150px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    h3,
+    p {
+      margin: 0.5rem;
+    }
+  }
+}
