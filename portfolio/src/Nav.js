@@ -12,13 +12,13 @@ function Nav() {
           <Link to={"projects"}>Projects</Link>
         </li>
         <li>
-          <a href="#">GitHub</a>
+          <a href="https://github.com/MGRINZ">GitHub</a>
         </li>
       </ul>
       <ul id="ui-links">
-        <li>
+        {/* <li>
           <a href="#">PL</a>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

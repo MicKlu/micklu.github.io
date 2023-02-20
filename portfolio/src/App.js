@@ -1,12 +1,13 @@
 import "./css/App.css";
 import Nav from "./Nav";
 import { Outlet } from "react-router-dom";
+import React from "react";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <div class="main-container">
+      <div className="main-container">
         <Outlet />
       </div>
     </div>
@@ -14,38 +15,108 @@ function App() {
 }
 
 export function Section(props) {
-  return <section id={`${props.id}-section`}>{props.children}</section>;
-}
+  let Heading = "h1";
+  if (props.h) Heading = props.h;
 
-export function MainSection(props) {
   return (
-    <Section id={props.id}>
-      <h1>{props.header}</h1>
+    <section id={`${props.id}-section`}>
+      {props.header && <Heading>{props.header}</Heading>}
       {props.children}
-    </Section>
+    </section>
   );
 }
 
-export function ListSection(props) {
-  let list;
+export class TextSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      header: "",
+      text: "",
+    };
+  }
 
-  if (props.element) {
-    const ListItem = props.element;
-    list = props.list.map((item, index) => {
-      return <ListItem key={index} item={item} />;
-    });
-  } else {
-    list = props.list.map((item, index) => {
-      return <li key={index}>{item.toString()}</li>;
+  componentDidMount() {
+    let header, text;
+    let p = fetch(process.env.PUBLIC_URL + `/content/headers.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        header = data[this.props.id];
+      });
+
+    let p2 = fetch(process.env.PUBLIC_URL + `/content/${this.props.id}.txt`)
+      .then((response) => response.text())
+      .then((value) => {
+        text = value;
+      });
+
+    Promise.all([p, p2]).then(() => {
+      this.setState({
+        header: header,
+        text: text,
+      });
     });
   }
 
-  return (
-    <Section id={props.id}>
-      <h2>{props.header}</h2>
-      <ul>{list}</ul>
-    </Section>
-  );
+  render() {
+    return (
+      <Section {...this.props} id={this.props.id} header={this.state.header}>
+        <p>{this.state.text}</p>
+      </Section>
+    );
+  }
+}
+
+export class ListSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      header: "",
+      list: [],
+    };
+  }
+
+  componentDidMount() {
+    let header, list;
+    let p = fetch(process.env.PUBLIC_URL + `/content/headers.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        header = data[this.props.id];
+      });
+
+    let p2 = fetch(process.env.PUBLIC_URL + `/content/${this.props.id}.json`)
+      .then((response) => response.json())
+      .then((value) => {
+        list = value;
+      });
+
+    Promise.all([p, p2]).then(() => {
+      this.setState({
+        header: header,
+        list: list,
+      });
+    });
+  }
+
+  render() {
+    let list;
+
+    if (this.props.element) {
+      const ListItem = this.props.element;
+      list = this.state.list.map((item, index) => {
+        return <ListItem key={index} item={item} />;
+      });
+    } else {
+      list = this.state.list.map((item, index) => {
+        return <li key={index}>{item.toString()}</li>;
+      });
+    }
+
+    return (
+      <Section {...this.props} header={this.state.header} h="h2">
+        <ul>{list}</ul>
+      </Section>
+    );
+  }
 }
 
 export default App;
