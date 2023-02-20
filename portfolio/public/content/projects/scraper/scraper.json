@@ -1,0 +1,7 @@
+{
+  "name": "Web scraper harmonogramu szkoły tańca",
+  "img": "/content/projects/scraper/bg.png",
+  "desc": "Web scraper pobierający plan zajęć szkoły tańca oraz aplikacja desktopowa i mobilna do wyświetlania pobranych danych.",
+  "repo": "programowanie-obiektowe-ariss-projekt-2",
+  "tags": ["Python", "Flask", "Java", "JavaFX", "Kotlin", "Android"]
+}

@@ -1,0 +1,77 @@
+<p>
+  Semestr piąty studiów Automatyki i Robotyki na Politechnice Gdańskiej uważany
+  jest powszechnie za najtrudniejszy ze względu na przedmiot Sterowanie
+  Procesami Ciągłymi. WebSCADA jest jednak projektem realizowanym na przedmiot
+  Sterowniki Programowalne, przy czym projekt ten jest dobrowolny, na dodatkowe
+  punkty.
+</p>
+<p>
+  SCADA czyli Supervisory Control And Data Acquisition jest systemem działającym
+  w warstwie sterowania nadrzędnego w warstwowej strukturze systemu sterowania.
+  Nadzoruje on warstwę sterowania bezpośredniego, odpowiada za zbieranie i
+  archiwizację danych, ich wizualizację oraz zgłaszanie alarmów.
+</p>
+<p>
+  Niniejszy projekt miał na celu przygotowanie prostej wersji SCADY,
+  realizującej tylko zbieranie danych i ich wizualizację. Jego realizacja składa
+  się z trzech elementów: loggera, zbierającego dane ze sterownika PLC do bazy
+  danych, wizualzacji w przeglądarce internetowej oraz API do wymiany danych
+  między loggerem i wizualizacją.
+</p>
+<figure class="article-image">
+  <img
+    src="/content/projects/webscada/ws-mb-bg.png"
+    alt="Przykładowe dane w rejestrach sterownika (symulowane)" />
+  <figcaption>Przykładowe dane w rejestrach sterownika (symulowane)</figcaption>
+</figure>
+<p>
+  Do wymiany informacji pomiędzy sterownikiem, a systemem SCADA został
+  wykorzystany protokół Modbus. Za jego pomocą logger pobierał dane z rejestrów
+  sterownika i zapisywał je do bazy danych MySQL. Aplikacja loggera została
+  napisana w języku C++ z wykorzystaniem bibliotek libmodbus i MySQL Connector.
+  Umożliwia ona:
+</p>
+<ul>
+  <li>
+    nawiązanie połączenia ze sterownikiem poprzez interfejs szeregowy lub
+    TCP/IP;
+  </li>
+  <li>połączenie z bazą danych MySQL z wykorzystaniem protokołu X;</li>
+  <li>odczyt i zapis danych w określonych odstępach czasu;</li>
+  <li>
+    określenie rejestrów do odczytu/zapisu, ich typów oraz nadanie im etykiet;
+  </li>
+  <li>
+    interakcje z użytkownikiem poprzez CLI w zakresie wstrzymania, wznowienia
+    lub zakończenia zbierania danych oraz przeładowania konfiguracji.
+  </li>
+</ul>
+<p>
+  Zrealizowane w PHP API odpowiada za komunikację pomiędzy loggerem (a właściwie
+  bazą danych), a wizualizacją przy pomocy zapytań HTTP. Obejmuje ono funkcje
+  odczytu i zapisu wybranych rejestrów po ich adresie lub nazwie etykiety oraz
+  pobranie listy wszystkich dostępnych zmiennych.
+</p>
+<figure class="article-image">
+  <img
+    src="/content/projects/webscada/ws-bg.png"
+    alt="Wizualizacja danych ze sterownika" />
+  <figcaption>Wizualizacja danych ze sterownika</figcaption>
+</figure>
+<p>
+  Wizualizacja zrealizowana została w postaci strony internetowej z
+  wykorzystaniem JavaScript. Na jej potrzeby utworzono kilka klas kontrolek
+  prezentowanych w postaci grafiki wektorowej SVG lub zwykłych elementów
+  tekstowych. Każdą kontrolkę można skojarzyć z konkretnym adresem lub etykietą
+  skonfigurowaną w loggerze i w ten sposób wyświetlić pobraną wartość lub
+  zapewnić możliwość jej zmiany. Kontrolki odświeżają dane ze stałym odstępem
+  czasu, dlatego na ekranie przedstawione są zawsze aktualne dane.
+</p>
+<p>
+  Przy realizacji projektu wykorzystano symulator rejestrów sterownika PLC.
+  Prezentacja projektu odbyła się z kolei z wykorzystaniem sterownika GE Fanuc
+  PACSystems RX3i, gdzie zaobserwowanym problemem była nieprawidłowa konwersja
+  liczb typu float, ze względu na inną architekturę niż symulator. Niemniej
+  jednak rozwiązanie to zostało przyjęte i najwyżej ocenione, a ponadto
+  zaproponowano jego rozwój w postaci pracy inżynierskiej.
+</p>

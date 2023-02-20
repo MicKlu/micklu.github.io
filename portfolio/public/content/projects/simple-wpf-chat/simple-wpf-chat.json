@@ -1,0 +1,19 @@
+{
+  "name": "Simple WPF Chat",
+  "img": "/content/projects/simple-wpf-chat/server.png",
+  "desc": "Prosta aplikacja czatu.",
+  "repo": "simple-wpf-chat",
+  "tags": ["C#", "WPF"],
+  "galleries": {
+    "simple-wpf-chat": [
+      {
+        "src": "server.png",
+        "caption": "Aplikacja, jako serwer"
+      },
+      {
+        "src": "client.png",
+        "caption": "Aplikacja, jako klient"
+      }
+    ]
+  }
+}

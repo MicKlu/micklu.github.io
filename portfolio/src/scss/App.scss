@@ -1,4 +1,5 @@
-@use "variables.scss" as vars;
+@use "_variables.scss" as vars;
+@use "_common.scss";
 
 * {
   padding: 0;
@@ -13,7 +14,73 @@ body {
 }
 
 section {
+  margin: 3rem 0;
+}
+
+article {
   margin: 1.5rem 0;
+}
+
+section,
+article {
+  ul,
+  ol {
+    margin: -0.5rem 0 -0.5rem 2rem;
+    line-height: 1.5rem;
+  }
+
+  p {
+    margin: 1.5rem 0;
+  }
+
+  figure.article-image {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    max-width: 450px;
+
+    img {
+      max-width: inherit;
+    }
+  }
+
+  blockquote {
+    ul li {
+      list-style-type: "—";
+      padding-inline-start: 1ch;
+      font-style: italic;
+
+      &::before {
+        content: "„";
+      }
+
+      &::after {
+        content: "”";
+      }
+    }
+  }
+
+  .article-gallery {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    figure {
+      max-width: 200px;
+      a,
+      a > img {
+        max-width: inherit;
+      }
+    }
+  }
+}
+
+figcaption {
+  max-width: inherit;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: darken(vars.$textColor, 10%);
 }
 
 @for $i from 1 through 6 {
@@ -38,16 +105,26 @@ a {
 }
 
 .main-container {
-  padding: 2.5rem 10rem;
+  padding: 2.5rem 15rem;
   display: flex;
 }
 
 .container {
-  padding: 1rem;
+  @extend %container;
 }
 
-section {
-  ul {
-    margin-left: 2rem;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  
+  .tag {
+    @extend %tag;
+  
+    &-icon {
+      margin-right: 0.5rem;
+    }
   }
+  
 }

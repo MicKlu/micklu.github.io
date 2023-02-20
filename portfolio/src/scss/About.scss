@@ -1,15 +1,22 @@
-@use "App.scss";
+@use "_common.scss";
 
-#left-pane {
-  @extend .container;
+#side-pane {
+  @extend %container;
 
   flex: 3;
 }
 
-#right-pane {
-  @extend .container;
+#main-pane {
+  @extend %container;
 
   flex: 9;
+}
+
+#about-section {
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
 
 #education-section,

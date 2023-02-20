@@ -1,5 +1,7 @@
 {
-    "name": "Lorem ipsum",
-    "img": "https://via.placeholder.com/450x250",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nonerat non tellus tempus faucibus."
+  "name": "Exif Image Sorter",
+  "img": "/content/projects/exif-sort/bg.png",
+  "desc": "Program do porządkowania kolekcji zdjęć na podstawie danych Exif.",
+  "repo": "exif-sort",
+  "tags": ["Python", "Qt"]
 }

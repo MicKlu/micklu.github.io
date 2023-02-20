@@ -3,15 +3,17 @@ import Nav from "./Nav";
 import { Outlet } from "react-router-dom";
 import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-      <div className="main-container">
-        <Outlet />
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Nav />
+        <div className="main-container">
+          <Outlet />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export function Section(props) {
@@ -117,6 +119,23 @@ export class ListSection extends React.Component {
       </Section>
     );
   }
+}
+
+export function Gallery(props) {
+  const images = props.imgs.map((img, index) => (
+    <figure key={index}>
+      <a href={img.src} target="_blank" rel="noreferrer">
+        <img src={img.src} alt={img.caption} />
+      </a>
+      <figcaption>{img.caption}</figcaption>
+    </figure>
+  ));
+
+  return (
+    <div id={`gallery-${props.id}`} className="article-gallery">
+      {images}
+    </div>
+  );
 }
 
 export default App;

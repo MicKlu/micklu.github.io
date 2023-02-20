@@ -1,0 +1,9 @@
+{
+    "name": "Radio PSC",
+    "img": "/content/projects/radio-psc/bg.png",
+    "desc": "Bot na Discorda do odtwarzania muzyki na kanale głosowym z plików lokalnych lub serwisu YouTube.",
+    "repo": "radio-psc",
+    "tags": [
+        "Java"
+    ]
+}

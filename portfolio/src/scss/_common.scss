@@ -1,0 +1,12 @@
+@use "_variables.scss" as vars;
+
+%container {
+  padding: 1rem;
+}
+
+%tag {
+  padding: 0.5rem;
+  border: 1px solid vars.$tagColor;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import About from "./About";
-import Projects from "./Projects";
+import Projects, { Project, projectLoader } from "./Projects";
 import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
@@ -18,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: "projects",
         element: <Projects />,
+      },
+      {
+        path: "projects/:projectId",
+        loader: projectLoader,
+        element: <Project />,
       },
     ],
   },

@@ -6,13 +6,13 @@ function Nav() {
     <nav>
       <ul id="nav-links">
         <li>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"}>O sobie</Link>
         </li>
         <li>
-          <Link to={"projects"}>Projects</Link>
+          <Link to={"projects"}>Projekty</Link>
         </li>
         <li>
-          <a href="https://github.com/MGRINZ">GitHub</a>
+          <a href="https://github.com/MicKlu">GitHub</a>
         </li>
       </ul>
       <ul id="ui-links">

@@ -1,0 +1,7 @@
+{
+  "name": "rofi-apps",
+  "img": "/content/projects/rofi-apps/bg.png",
+  "desc": "Konfigurowalny launcher aplikacji, wykorzystujący rofi jako front-end.",
+  "repo": "rofi-apps",
+  "tags": ["Python"]
+}

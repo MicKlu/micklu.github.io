@@ -1,17 +1,19 @@
 [
     {
-        "course": "What",
-        "date": "When",
-        "institution": "Where"
+        "course": "Automatyka, Robotyka i Systemy Sterowania",
+        "title": "mgr inż.",
+        "date": "2021-2022",
+        "institution": "Politechnika Gdańska"
     },
     {
-        "course": "What",
-        "date": "When",
-        "institution": "Where"
+        "course": "Automatyka i Robotyka",
+        "title": "inż.",
+        "date": "2017-2021",
+        "institution": "Politechnika Gdańska"
     },
     {
-        "course": "What",
-        "date": "When",
-        "institution": "Where"
+        "course": "Technik Informatyk",
+        "date": "2013-2017",
+        "institution": "Zespół Szkół im. Bohaterów Września 1939 Roku w Iławie"
     }
 ]

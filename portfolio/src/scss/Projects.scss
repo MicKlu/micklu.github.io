@@ -1,13 +1,19 @@
+@use "_variables.scss" as vars;
+@use "_common.scss";
+
 #projects-gallery-section {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem 0.5rem;
 
   article.project {
-    border: 1px solid gray;
+    margin: 0;
+    border: 1px solid #505050;
+    background: vars.$backgroundColor2;
     border-radius: 0.25rem;
-    max-width: calc((100% - 1rem) / 3);
+    width: calc((100% - 1rem) / 3);
     overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 
     header {
       figure {
@@ -16,12 +22,57 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        a {
+          display: block;
+          height: 200px;
+          width: 100%;
+          background-size: cover;
+          background-position: center;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
 
     h3,
     p {
       margin: 0.5rem;
+    }
+  }
+}
+
+#project-details {
+  header {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .repo-btn {
+      @extend %tag;
+
+      i {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        border-color: lighten(vars.$tagColor, 10%);
+        color: lighten(vars.$linkColor, 10%);
+      }
+    }
+  }
+
+  article {
+    a {
+      color: vars.$articleLinkColor;
+
+      &:hover {
+        color: lighten(vars.$articleLinkColor, 10%);
+      }
     }
   }
 }

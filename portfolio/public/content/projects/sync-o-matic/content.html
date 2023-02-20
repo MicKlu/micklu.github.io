@@ -1,0 +1,36 @@
+<p>
+  W ramach przedmiotu Programowanie Sieciowe na drugim semestrze studiów
+  drugiego stopnia na kierunku Automatyka, Robotyka i Systemy Sterowania na
+  Politechnice Gdańskiej na specjalności Informatyka w Systemach Sterowania
+  warunkiem zaliczenia laboratorium było przygotowanie aplikacji sieciowej w
+  wybranym języku programowania. Zasadniczym wymaganiem było zastosowanie gniazd
+  sieciowych do realizacji komunikacji. Realizowane rozwiązania obejmowały m.
+  in. proste gry typu kółko i krzyżyk, czy strumieniowanie muzyki.
+</p>
+<figure class="article-image">
+  <img
+    src="/content/projects/sync-o-matic/img/main.png"
+    alt="Główne okno aplikacji" />
+  <figcaption>Główne okno aplikacji</figcaption>
+</figure>
+<p>
+  Sync-o-Matic to aplikacja do synchronizacji plików pomiędzy wieloma
+  komputerami. Napisana została w języku C# z wykorzystaniem interfejsu WPF,
+  dlatego przeznaczona jest dla komputerów z systemem Windows. Aplikacja
+  wykorzystuje komunikację P2P, pełniąc jednocześnie rolę klienta i serwera.
+  Urządzenia biorące udział w synchronizacji wymieniają się informacjami o
+  aktualnej zawartości udostępnianych folderów. Po porównaniu otrzymanych danych
+  z plikami lokalnymi, wysyłają żądanie pobrania wskazanych plików z komputera
+  zdalnego. Pliki zdalne zastępują pliki lokalne, w wyniku czego zarówno
+  katalogi lokalne, jak i zdalne zawierają dokładnie te same pliki. Efektem tego
+  jest pomyślna synchronizacja urządzeń.
+</p>
+<p>
+  Na każdym urządzeniu użytkownik dodaje listę komputerów zdalnych, z którymi ma
+  zamiar synchronizować pliki. Określa jakie katalogi lokalne udostępnia innym
+  urządzeniom do synchronizacji wraz z prawami dostępu oraz, które katalogi
+  zdalne synchronizuje lokalnie. W tym drugim przypadku można ustalić również
+  kierunek synchronizacji (pobieranie, wysyłanie lub dwukierunkowa) oraz zbiór
+  wyrażeń wykluczających pliki.
+</p>
+<gallery id="sync-o-matic" />

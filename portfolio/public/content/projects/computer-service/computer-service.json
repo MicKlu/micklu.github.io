@@ -1,0 +1,26 @@
+{
+  "name": "Serwis komputerowy",
+  "img": "/content/projects/computer-service/bg.png",
+  "desc": "Prosta aplikacja desktopowa do zarządzania zleceniami w serwisie komputerowym.",
+  "repo": "programowanie-obiektowe-ariss/tree/main/Projekt1",
+  "tags": [
+    "Java",
+    "JavaFX"
+  ],
+  "galleries": {
+    "computer-service": [
+      {
+        "src": "img/main.png",
+        "caption": "Główne okno programu"
+      },
+      {
+        "src": "img/order.png",
+        "caption": "Zarządzenie zleceniem"
+      },
+      {
+        "src": "img/maintainers.png",
+        "caption": "Zarządzanie serwisantami"
+      }
+    ]
+  }
+}
