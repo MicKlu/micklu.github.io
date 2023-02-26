@@ -1,0 +1,27 @@
+{
+  "name": "Easter Egg Man",
+  "img": "/content/projects/eeman/bg.png",
+  "desc": "Prosta gra platformowa.",
+  "repo": "informatyka-projekt",
+  "tags": ["C++", "SFML"],
+  "galleries": {
+    "eeman": [
+      {
+        "src": "img/main.png",
+        "caption": "Menu główne"
+      },
+      {
+        "src": "bg.png",
+        "caption": "Rozgrywka"
+      },
+      {
+        "src": "img/help.png",
+        "caption": "Ekran pomocy"
+      },
+      {
+        "src": "img/end.png",
+        "caption": "Podsumowanie poziomu"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Turniej Counter Strike: Global Offensive",
+    "img": "content/projects/csgo/bg.png",
+    "desc": "Strona do organizacji wewnątrzszkolnego turnieju Counter Strike: Global Offensive w Zespole Szkół im. Bohaterów Września 1939 Roku w Iławie.",
+    "tags": [
+        "PHP",
+        "SQLite",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery"
+    ]
+}

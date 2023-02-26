@@ -1,0 +1,25 @@
+<figure class="article-image">
+  <img
+    src="/content/projects/rofi-apps/bg.png"
+    alt="Uporządkowana lista aplikacji" />
+  <figcaption>Uporządkowana lista aplikacji</figcaption>
+</figure>
+<p>
+  Rofi-apps jest niewielkim skryptem Pythona, który napisałem, ponieważ zabrakło
+  mi pewnej funkcjonalności w launcherze aplikacji "drun" w aplikacji "rofi".
+  Mianowicie chciałem mieć możliwość usunięcia niektórych wpisów, przeniesienie
+  najczęściej używanych na początek i posortowanie reszty.
+</p>
+<p>
+  Ogólne działanie skryptu jest następujące. W każdym katalogu, gdzie mogą
+  znajdować się wpisy aplikacji, analizowane są kolejne pliki wpisów. Ich nazwy
+  porównywane są z wyrażeniami regularnymi umieszczonymi na "czarnej liście" w
+  pliku konfiguracyjnym. Wszystkie dopasowane wpisy są odrzucane. Następnie
+  sprawdza się czy wpisy mają być przypięte tzn. umieszczone na początku listy.
+  Kolejność przypiętych wpisów odpowiada kolejności wyrażeń w pliku
+  konfiguracyjnym. Kolejnym etapem jest zmiana nazwy wybranych wpisów. Na koniec
+  wszystkie nieprzypięte wpisy są sortowane. Skrypt zwraca odpowiednio
+  sformatowaną listę wpisów, która wyświetlana jest przez rofi. Po wyborze wpisu
+  skrypt otrzymuje informacje o nim poprzez zmienną środowiskową i uruchamia
+  odpowiednią aplikację.
+</p>

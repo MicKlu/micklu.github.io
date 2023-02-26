@@ -1,0 +1,43 @@
+<p>
+  Apetyt na sport to kolejny przykład ciekawej nazwy nadanej przeze mnie
+  aplikacji. A wymyślanie nazw nie jest moją mocną stroną. Jest to projekt
+  zrealizowany na potrzeby przedmiotu Bazy Wiedzy i Systemy Wspomagania Decyzji
+  realizowanego na drugim semestrze studiów drugiego stopnia na kierunku
+  Automatyka, Robotyka i Systemy Sterowania na Politechnice Gdańskiej na
+  specjalności Informatyka w Systemach Sterowania. Jedynym warunkiem zaliczenia
+  tego przedmiotu było przygotowanie prostego systemu ekspertowego. W moim
+  przypadku pomysł padł na aplikację do wyznaczania diety dla sportowców.
+</p>
+<p>
+  Ponownie wybór technologii był dowolny. Na potrzeby tego przedmiotu mógłbym
+  całość zrealizować w Pythonie, wykorzystując m. in. bibliotekę scipy do
+  optymalizacji, ale to by było za proste. A ponieważ programowania w C# na tym
+  semestrze było już wystarczająco dużo, to postanowiłem, że ten projekt
+  zrealizuję w formie aplikacji mobilnej na platformę Android napisanej w Javie.
+</p>
+<p>
+  Trzeba od razu zaznaczyć, że aplikacja nie jest przeznaczona do praktycznego
+  zastosowania. Nie była wspierana przez zespół ekspertów lub naukowców z
+  dziedziny dietetyki, dlatego nie powinna stanowić jedynego źródła opracowanej
+  diety. Zwłaszcza, że przedstawiane przez aplikację wyniki są dość
+  abstrakcyjne, choć z matematycznego punktu widzenia są one poprawne.
+</p>
+<p>
+  Mianowicie użytkownik proszony jest o wskazanie dyscypliny sportowej, płci,
+  opisanie swojej budowy ciała oraz planu treningowego, a także określenie
+  dodatkowych wymagań odnośnie diety (np. bez mięsa). Aplikacja oblicza wtedy
+  zapotrzebowanie kaloryczne oraz udział poszczególnych składników odżywczych
+  (białko, tłuszcze, węglowodany), które stają się ograniczeniami w zagadnieniu
+  minimalizacji funkcji wielu zmiennych (porcji produktów).
+</p>
+<p>
+  Ponieważ w obliczeniach uwzględniane są wszystkie rodzaje produktów
+  umieszczone w bazie danych (z wyłączeniem produktów odrzuconych przez
+  użytkownika), zastosowany algorytm optymalizacji przedstawia wyniki dla
+  wszystkich tych produktów. W rezultacie pomimo znalezienia optymalnego
+  rozwiązania, wyznaczone porcje produktów często nie mają zbyt wiele sensu np.
+  2 g ananasa. Właśnie z tego powodu nie można traktować aplikacji, jako
+  pełnego, poprawnego systemu ekspertowego zastępującego wiedzę
+  wykwalifikowanego dietetyka.
+</p>
+<gallery id="appetite-for-sport" />

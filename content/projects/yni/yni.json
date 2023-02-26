@@ -1,0 +1,38 @@
+{
+    "name": "YourNewIdentity",
+    "img": "/content/projects/yni/bg.png",
+    "desc": "Prosty portal społecznościowy.",
+    "tags": [
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery"
+    ],
+    "repo": "skiti",
+    "galleries": {
+        "yni": [
+            {
+                "src": "img/konto.png",
+                "caption": "Informacje o użytkowniku"
+            },
+            {
+                "src": "img/tablica.png",
+                "caption": "Tablica wiadomości"
+            },
+            {
+                "src": "img/znajomi.png",
+                "caption": "Lista znajomych"
+            },
+            {
+                "src": "img/zdjecia.png",
+                "caption": "Galeria zdjęć"
+            },
+            {
+                "src": "img/ustawienia.png",
+                "caption": "Ustawienia konta"
+            }
+        ]
+    }
+}

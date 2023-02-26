@@ -1,0 +1,43 @@
+<h2>O pracy</h2>
+<p>
+  Wykrywanie i zliczanie obiektów jest jednym z powszechnych zagadnień
+  spotykanych w automatyce. Zadanie to może wydawać się proste, choć w
+  rzeczywistości potrafi przysporzyć wielu problemów. Przy dużej liczbie
+  elementów człowiekowi trudno jest je zliczyć i łatwo się pomylić.
+  Powtarzalność zadania i chęć uzyskania dokładnych wyników w krótkim czasie
+  stwarza potrzebę opracowywania nowych rozwiązań automatyzacji tego procesu.
+</p>
+<h3>Cel pracy</h3>
+<p>
+  Opracowanie algorytmu detekcji i zliczania obiektów mechanicznych,
+  rozrzuconych na płaskiej powierzchni o jednolitym tle, widocznych na obrazie z
+  kamery. Zliczane elementy posiadają bliżej nieokreślony kształt i niewielki
+  rozmiar oraz nie pokrywają się.
+</p>
+<h2>Cechy rozwiązania</h2>
+<figure class="article-image">
+  <img
+    src="/content/projects/pd-vision/img/wykres.png"
+    alt="Wykres dokładności zbadanych algorytmów dla wszystkich zestawów testowych" />
+  <figcaption>
+    Wykres dokładności zbadanych algorytmów dla wszystkich zestawów testowych
+  </figcaption>
+</figure>
+<ul>
+  <li>Segmentacja obrazu we wszystkich składowych przestrzeni barw HSV</li>
+  <li>Oddzielenie obiektów od tła poprzez wykrycie koloru tła</li>
+  <li>
+    Automatyczne progowanie obrazu w oparciu o kształt histogramów przestrzeni
+    nasycenia i wartości
+  </li>
+  <li>Zliczanie obiektów metodą analizy plam</li>
+  <li>Propozycja metody oddzielania połączonych elementów</li>
+</ul>
+<h2>Realizacja programistyczna</h2>
+<p>
+  Algorytm wykrywania i zliczania obiektów został napisany w języku Python z
+  wykorzystaniem biblioteki przetwarzania obrazów OpenCV. Część operacji została
+  zrealizowana przy pomocy biblioteki NumPy, natomiast interfejs graficzny
+  powstał z użyciem silnika Qt 5 (PyQt).
+</p>
+<gallery id="pd-vision" />

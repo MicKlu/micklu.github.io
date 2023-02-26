@@ -1,0 +1,19 @@
+{
+    "name": "WebSCADA",
+    "img": "/content/projects/webscada/ws-bg.png",
+    "desc": "Prosty system SCADA z interfejsem webowym.",
+    "repo": [
+        {
+            "name": "simple-modbus-logger"
+        },
+        {
+            "name": "web-scada"
+        }
+    ],
+    "tags": [
+        "C++",
+        "MySQL",
+        "PHP",
+        "JavaScript"
+    ]
+}

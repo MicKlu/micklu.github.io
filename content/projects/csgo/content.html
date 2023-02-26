@@ -1,0 +1,73 @@
+<h2>Pierwszy taki turniej</h2>
+<p>
+  Jesień, 2016 r. Okres szkolnych imprez integracyjnych w związku z "powrotem do
+  szkoły". Także początek ostatniego roku w technikum informatycznym w Zespole
+  Szkół im. Bohaterów Września 1939 Roku w Iławie. Rok ten był jednak
+  szczególnie wyjątkowy dla szkolnej społeczności graczy, gdyż właśnie wtedy po
+  raz pierwszy dyrekcja zgodziła się na przeprowadzenie szkolnego turnieju
+  e-sportowego w Counter Strike: Global Offensive. Oczywiście sugestie takich
+  zawodów pojawiały się już znacznie wcześniej, lecz ze względu na to, że CS
+  jest "grą z przemocą", nigdy wcześniej nie miały miejsca. Nie było z kolei
+  przeciwskazań na takie gry jak Need for Speed: Most Wanted 2005 (na którą
+  szkoła ma licencję) czy League of Legends, jednak tych turniejów też jakoś nie
+  organizowano.
+</p>
+<h2>Przygotowanie strony zawodów</h2>
+<p>
+  Pojawiła się potrzeba zbudowania strony na potrzeby organizacji turnieju.
+  Czasu było niewiele, więc od razu zabraliśmy się do pracy. Szczególnie, że
+  cały projekt mogliśmy realizować tylko na maszynach wirtualnych (poważnie),
+  których wydajność pozostawiała wiele do życzenia. Jak to w szkołach, konta
+  uczniów mają ograniczone uprawnienia, więc np. uruchomienie serwera nie było
+  możliwe. Niemniej jednak, realizację projektu rozpoczęliśmy tak, jak każdy
+  inny problem, który chcieliśmy rozwiązać – od rozrysowania wszystkiego w
+  Paincie 😀. Wiedząc co chcemy uzyskać, wystarczyło to zaimplementować.
+</p>
+<figure class="article-image">
+  <img src="/content/projects/csgo/bg.png" alt="Strona główna turnieju CS-a" />
+  <figcaption>Strona główna turnieju CS-a</figcaption>
+</figure>
+<p>I tak powstała strona z panelem admina umożliwiająca:</p>
+<ul>
+  <li>zarządzanie uczestnikami zawodów,</li>
+  <li>zarządzanie drużynami,</li>
+  <li>wprowadzanie harmonogramu spotkań,</li>
+  <li>wprowadzanie wyników spotkań,</li>
+  <li>wprowadzanie statystyk uczestników,</li>
+  <li>wyświetlanie harmonogramu, wyników spotkań i rankingów.</li>
+</ul>
+<p>
+  Jednym z zasadniczych ograniczeń przy realizacji tego projektu był brak
+  dostępu do bazy danych. Strona miała zostać opublikowana w domenie szkoły,
+  która korzystała z bazy danych MySQL. No ale kto udostępniłby uczniom dostęp
+  do bazy przechowującej całą zawartość CMS-a strony szkoły (ówcześnie Joomli!)?
+  Problem jednak udało się rozwiązać, wykorzystując bazę danych SQLite3.
+</p>
+<h2>Wdrożenie rozwiązania</h2>
+<p>
+  Po niecałym tygodniu prac strona była gotowa, choć to trochę za dużo
+  powiedziane, jednak wtedy był to dla nas ogromny sukces. Tego samego dnia
+  została umieszczona na stronie szkoły. Po powrocie do domu pierwsze co
+  zrobiłem, to sprawdziłem, czy wszystko działa. I oczywiście
+  <strong>nie działało</strong>. Pojawił się jakiś błąd związany z bazą danych.
+  A ponieważ był to piątek, musiałem czekać do poniedziałku, aby zdiagnozować
+  problem.
+</p>
+<p>
+  Okazało się, że serwer, na którym umieszczona była strona szkoły, działał na
+  PHP 5.2 i nie obsługiwał baz SQLite3. Na szczęście posiadał on wtyczkę PDO,
+  która te bazy obsługiwała. Wiązało się to jednak z koniecznością przepisania
+  całej obsługi bazy danych przy użyciu składni PDO, ale za to nie trzeba było
+  zmieniać sposobu przechowywania i przetwarzania danych. Po wszystkim strona
+  już działała prawidłowo. Uzupełniliśmy ją jeszcze o kilka drobnych
+  funkcjonalności i w takiej postaci wykorzystywana jest co roku po dziś dzień.
+</p>
+<h2>Podsumowanie</h2>
+<p>
+  Strona dostępna jest pod adresem
+  <a href="https://zsilawa.pl/cs">https://zsilawa.pl/cs</a>. Wybór roku zawodów
+  nie jest częścią naszego projektu, gdyż powstał w następnych latach. W każdym
+  razie pod każdym z nich kryje się właściwa część strony, prezentująca dane
+  zawodów. Mimo że całość projektu nie była szczególnie skomplikowana, to jednak
+  jego realizacja sprawiła nam wiele radości, ale przede wszystkim satysfakcji.
+</p>

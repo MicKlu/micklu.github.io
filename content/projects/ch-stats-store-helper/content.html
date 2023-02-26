@@ -1,0 +1,48 @@
+<p>
+  Stats Store Helper jest pluginem do gry rytmicznej Clone Hero, która, jak
+  nazwa wskazuje, jest klonem serii gier Guitar Hero. Rozgrywka polega na
+  zagraniu utworów poprzez trafianie w kolejne nuty poruszające się po planszy
+  przypominającej gryf gitary. Każde trafienie jest punktowane, a unikanie
+  pomyłek zapewnia wyższy mnożnik punktów.
+</p>
+<p>
+  Problemem w grze jest brak możliwości wyeksportowania statystyk, w celu np.
+  archiwizacji lub udostępnienia wyników. Problem ten próbowano rozwiązać –
+  jeden z deweloperów przygotował specjalną platformę online, ScoreSpy,
+  umożliwiającą udostępnianie wyników poprzez wgranie zrzutu ekranu wyników,
+  wykonanego z poziomu gry (dane binarne obrazu zawierały wszystkie statystyki
+  rozgrywki). Niestety wkrótce strona została zamknięta.
+</p>
+<figure class="article-image">
+  <img
+    src="/content/projects/ch-stats-store-helper/bg.png"
+    alt="Wygenerowany akrusz z wynikami" />
+  <figcaption>Wygenerowany akrusz z wynikami</figcaption>
+</figure>
+<p>
+  Po zamknięciu ScoreSpy postanowiłem przyjrzeć się możliwości utworzenia
+  pluginu do gry, pozwalającego na zapisanie statystyk do Arkuszy Google.
+  Wiedziałem, że gra została napisana w języku C# i działa na silniku Unity, a
+  także iż przygotowanie pluginu jest możliwe dzięki patcherowi BepInEx. Tu
+  należałoby zwrócić uwagę, że jednak był to w zasadzie mój pierwszy projekt w
+  języku C#, a na dodatek kod gry był zaciemniony. Na szczęście po dłuższej
+  analizie i metodzie prób i błędów udało się wydobyć potrzebne informacje.
+</p>
+<p>
+  Aktualnie po uruchomieniu plugin wymaga zalogowania się na konto Google, po
+  czym tworzy nowy arkusz według ustalonego w pliku konfiguracyjnym szablonu. Po
+  ukończeniu utworu, wykonanie zrzutu ekranu powoduje zebranie wszystkich
+  potrzebnych danych i zapisanie ich w nowym wierszu tabeli. Jeśli w arkuszu
+  znajdują się już statystyki utworu (identyfikowane po skrócie MD5 pliku z
+  nutami), następuje aktualizacja wyników, pod warunkiem, że wskazane w pliku
+  konfiguracyjnym statystyki uległy poprawie.
+</p>
+<p>
+  Plugin działa z ostatnią stabilną wersją 0.23 gry. Niedawno wydana została
+  jednak wersja 1.0, lecz plugin nie był na niej testowany i prawie na pewno nie
+  działa prawidłowo. Poza tym po dłuższym czasie ScoreSpy również powróciło,
+  jako fork oryginalnej gry, wraz z dodatkowymi usprawnieniami, jak np.
+  mechanizm anti-cheat. Plugin ten wciąż może znaleźć zastosowanie przy
+  prowadzeniu osobistej tablicy wyników bez obawy, że ScoreSpy ponownie zostanie
+  zamknięte.
+</p>

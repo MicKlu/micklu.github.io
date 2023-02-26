@@ -1,0 +1,7 @@
+{
+  "name": "ChorusLib",
+  "img": "/content/projects/chorus-lib/bg.png",
+  "desc": "Biblioteka .NET umożliwiająca wyszukiwanie utworów do gry Clone Hero w repozytorium chorus.",
+  "repo": "chorus-lib-net",
+  "tags": ["C#"]
+}

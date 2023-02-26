@@ -1,0 +1,55 @@
+{
+  "name": "Interfejs automatu biletowego ZKM Gdynia",
+  "img": "/content/projects/zkm-gdynia/img/start.png",
+  "desc": "Idea interfejsu dla automatów biletowych ZKM Gdynia w postaci interaktywnej webaplikacji.",
+  "repo": "wimwt",
+  "tags": ["HTML", "CSS", "JavaScript", "jQuery"],
+  "galleries": {
+    "zkm-gdynia": [
+      {
+        "src": "img/start.png",
+        "caption": "Ekran startowy"
+      },
+      {
+        "src": "img/ticket.png",
+        "caption": "Wybór biletu"
+      },
+      {
+        "src": "img/zone.png",
+        "caption": "Wybór strefy"
+      },
+      {
+        "src": "img/summary.png",
+        "caption": "Podsumowanie"
+      },
+      {
+        "src": "img/method.png",
+        "caption": "Wybór sposobu płatności"
+      },
+      {
+        "src": "img/cash.png",
+        "caption": "Płatność gotówką"
+      },
+      {
+        "src": "img/card.png",
+        "caption": "Płatnośc kartą"
+      },
+      {
+        "src": "img/printing.png",
+        "caption": "Drukowanie biletów"
+      },
+      {
+        "src": "img/done.png",
+        "caption": "Odbiór biletów"
+      },
+      {
+        "src": "img/thankyou.png",
+        "caption": "Zakończenie"
+      },
+      {
+        "src": "img/quick.png",
+        "caption": "Szybki zakup biletu. Po zatwierdzeniu następuje przejście do podsumowania."
+      }
+    ]
+  }
+}

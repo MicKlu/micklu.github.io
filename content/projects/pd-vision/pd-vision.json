@@ -1,0 +1,31 @@
+{
+  "name": "Zliczanie obiektów",
+  "img": "/content/projects/pd-vision/bg.png",
+  "desc": "Algorytm do wizyjnego zliczania obiektów. Realizacja pracy magisterskiej.",
+  "repo": "pd-vision",
+  "tags": ["Python", "OpenCV", "Numpy", "Qt"],
+  "galleries": {
+    "pd-vision": [
+      {
+        "src": "bg.png",
+        "caption": "Interfejs do badania algorytmu"
+      },
+      {
+        "src": "img/w_color_a_2.png",
+        "caption": "Przykładowy wynik (zestaw 1)"
+      },
+      {
+        "src": "img/b_color_b_2.png",
+        "caption": "Przykładowy wynik (zestaw 2)"
+      },
+      {
+        "src": "img/g_color_c_3.png",
+        "caption": "Przykładowy wynik (zestaw 3)"
+      },
+      {
+        "src": "img/y_color_a_3.png",
+        "caption": "Przykładowy wynik (zestaw 4)"
+      }
+    ]
+  }
+}

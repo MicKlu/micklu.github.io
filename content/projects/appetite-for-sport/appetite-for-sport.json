@@ -1,0 +1,35 @@
+{
+  "name": "Apetyt na sport",
+  "img": "/content/projects/appetite-for-sport/bg.png",
+  "desc": "Prosty system wspomagania decyzji przy określaniu diety dla sportowca w postaci aplikacji mobilnej.",
+  "repo": "appetite-for-sport",
+  "tags": ["Java", "Android"],
+  "galleries": {
+    "appetite-for-sport": [
+      {
+        "src": "img/select_sport.png",
+        "caption": "Wybór dyscypliny sportu"
+      },
+      {
+        "src": "img/body_description.png",
+        "caption": "Opis budowy ciała"
+      },
+      {
+        "src": "img/training_description.png",
+        "caption": "Opis treningu"
+      },
+      {
+        "src": "img/demand.png",
+        "caption": "Wyznaczone zapotrzebowanie"
+      },
+      {
+        "src": "img/allergies.png",
+        "caption": "Opcja wykluczenia produktów"
+      },
+      {
+        "src": "img/results.png",
+        "caption": "Wyznaczona dieta"
+      }
+    ]
+  }
+}
