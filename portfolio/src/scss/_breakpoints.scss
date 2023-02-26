@@ -1,0 +1,29 @@
+@mixin xs {
+  @media screen and (max-width: calc(600px - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: calc(600px - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin to-md {
+  @media screen and (max-width: calc(700px - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin to-lg {
+  @media screen and (max-width: calc(992px - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin to-xl {
+  @media screen and (max-width: calc(1200px - 0.02px)) {
+    @content;
+  }
+}

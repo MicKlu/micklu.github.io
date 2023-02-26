@@ -214,7 +214,7 @@ export async function projectLoader({ params }) {
 
 function RepoLink(props) {
   return (
-    <a class="repo-btn" href={`https://github.com/MicKlu/${props.repo}`}>
+    <a className="repo-btn" href={`https://github.com/MicKlu/${props.repo}`}>
       <i className="devicon-github-plain" />
       {props.label}
     </a>

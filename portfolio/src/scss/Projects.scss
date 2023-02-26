@@ -1,5 +1,6 @@
 @use "_variables.scss" as vars;
 @use "_common.scss";
+@use "_breakpoints.scss" as bp;
 
 #projects-gallery-section {
   display: flex;
@@ -49,6 +50,7 @@
   header {
     margin: 1.5rem 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
 
@@ -73,6 +75,25 @@
       &:hover {
         color: lighten(vars.$articleLinkColor, 10%);
       }
+    }
+  }
+}
+
+@include bp.xs {
+}
+
+@include bp.to-md {
+  #projects-gallery-section {
+    article.project {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+@include bp.to-lg {
+  #projects-gallery-section {
+    article.project {
+      width: calc((100% - 1rem) / 2);
     }
   }
 }

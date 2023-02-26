@@ -1,4 +1,5 @@
 @use "_common.scss";
+@use "breakpoints.scss" as bp;
 
 #side-pane {
   @extend %container;
@@ -28,5 +29,14 @@
 
   li {
     margin: 1rem 0;
+  }
+}
+
+@include bp.to-lg {
+  #main-pane,
+  #side-pane {
+    flex: 1;
+    min-width: 100%;
+    padding: 0 1rem;
   }
 }

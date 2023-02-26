@@ -1,5 +1,6 @@
 @use "_variables.scss" as vars;
 @use "_common.scss";
+@use "breakpoints" as bp;
 
 * {
   padding: 0;
@@ -37,14 +38,18 @@ article {
     float: right;
     margin-left: 1rem;
     margin-bottom: 1rem;
+    width: 40%;
     max-width: 450px;
+    text-align: left;
 
     img {
-      max-width: inherit;
+      max-width: 100%;
     }
   }
 
   blockquote {
+    margin: 1.5rem 0;
+
     ul li {
       list-style-type: "—";
       padding-inline-start: 1ch;
@@ -67,10 +72,11 @@ article {
     flex-wrap: wrap;
 
     figure {
-      max-width: 200px;
+      width: 200px;
+      
       a,
       a > img {
-        max-width: inherit;
+        max-width: 100%;
       }
     }
   }
@@ -118,13 +124,72 @@ a {
   flex-wrap: wrap;
   gap: 0.25rem;
   padding: 0.25rem;
-  
+
   .tag {
     @extend %tag;
-  
+
     &-icon {
       margin-right: 0.5rem;
     }
   }
-  
+}
+
+@include bp.to-xl {
+  .main-container {
+    padding: 2.5rem 7.5rem;
+  }
+}
+
+@include bp.to-lg {
+  .main-container {
+    flex-wrap: wrap;
+    padding: 3rem 1rem;
+  }
+
+  section {
+    &:first-child,
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  section,
+  article {
+    figure.article-image {
+      max-width: 300px;
+    }
+  }
+}
+
+@include bp.to-md {
+  section,
+  article {
+    figure.article-image {
+      float: none;
+      margin: 1rem auto;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+  }
+}
+
+@include bp.xs {
+  section,
+  article {
+    .article-gallery {
+      figure {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 }
