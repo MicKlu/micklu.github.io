@@ -38,8 +38,7 @@ article {
     float: right;
     margin-left: 1rem;
     margin-bottom: 1rem;
-    width: 40%;
-    max-width: 450px;
+    max-width: 40%;
     text-align: left;
 
     img {
@@ -83,7 +82,7 @@ article {
 }
 
 figcaption {
-  max-width: inherit;
+  max-width: 100%;
   font-size: 0.8rem;
   font-style: italic;
   color: darken(vars.$textColor, 10%);
