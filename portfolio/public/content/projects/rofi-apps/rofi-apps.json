@@ -3,5 +3,13 @@
   "img": "/content/projects/rofi-apps/bg.png",
   "desc": "Konfigurowalny launcher aplikacji, wykorzystujący rofi jako front-end.",
   "repo": "rofi-apps",
-  "tags": ["Python"]
+  "tags": [
+    "Python"
+  ],
+  "images": {
+    "bg": {
+      "src": "bg.png",
+      "caption": "Uporządkowana lista aplikacji"
+    }
+  }
 }

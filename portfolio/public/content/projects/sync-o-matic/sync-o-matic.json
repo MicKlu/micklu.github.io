@@ -3,7 +3,16 @@
   "img": "/content/projects/sync-o-matic/img/main.png",
   "desc": "Aplikacja do synchronizacji plików.",
   "repo": "sync-o-matic",
-  "tags": ["C#", "WPF"],
+  "tags": [
+    "C#",
+    "WPF"
+  ],
+  "images": {
+    "main": {
+      "src": "img/main.png",
+      "caption": "Główne okno aplikacji"
+    }
+  },
   "galleries": {
     "sync-o-matic": [
       {

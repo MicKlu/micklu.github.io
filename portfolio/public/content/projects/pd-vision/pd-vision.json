@@ -3,7 +3,18 @@
   "img": "/content/projects/pd-vision/bg.png",
   "desc": "Algorytm do wizyjnego zliczania obiektów. Realizacja pracy magisterskiej.",
   "repo": "pd-vision",
-  "tags": ["Python", "OpenCV", "Numpy", "Qt"],
+  "tags": [
+    "Python",
+    "OpenCV",
+    "Numpy",
+    "Qt"
+  ],
+  "images": {
+    "wykres": {
+      "src": "img/wykres.png",
+      "caption": "Wykres dokładności zbadanych algorytmów dla wszystkich zestawów testowych"
+    }
+  },
   "galleries": {
     "pd-vision": [
       {

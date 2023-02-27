@@ -60,9 +60,15 @@ nav {
   }
 }
 
-@include bp.to-xl {
+@include bp.to-xxl {
   nav {
     padding: 0 5rem;
+  }
+}
+
+@include bp.to-xl {
+  nav {
+    padding: 0 3.25rem;
   }
 }
 

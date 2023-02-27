@@ -27,3 +27,9 @@
     @content;
   }
 }
+
+@mixin to-xxl {
+  @media screen and (max-width: calc(1400px - 0.02px)) {
+    @content;
+  }
+}

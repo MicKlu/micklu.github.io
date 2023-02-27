@@ -73,7 +73,7 @@ article {
 
     figure {
       width: 200px;
-      
+
       a,
       a > img {
         max-width: 100%;
@@ -131,6 +131,12 @@ a {
     &-icon {
       margin-right: 0.5rem;
     }
+  }
+}
+
+@include bp.to-xxl {
+  .main-container {
+    padding: 2.5rem 10rem;
   }
 }
 

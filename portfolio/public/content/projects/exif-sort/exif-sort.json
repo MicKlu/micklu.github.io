@@ -3,5 +3,14 @@
   "img": "/content/projects/exif-sort/bg.png",
   "desc": "Program do porządkowania kolekcji zdjęć na podstawie danych Exif.",
   "repo": "exif-sort",
-  "tags": ["Python", "Qt"]
+  "tags": [
+    "Python",
+    "Qt"
+  ],
+  "images": {
+    "bg": {
+      "src": "bg.png",
+      "caption": "Interfejs programu"
+    }
+  }
 }

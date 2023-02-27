@@ -5,5 +5,11 @@
     "repo": "radio-psc",
     "tags": [
         "Java"
-    ]
+    ],
+    "images": {
+        "bg": {
+            "src": "bg.png",
+            "caption": "Interfejs aplikacji"
+        }
+    }
 }

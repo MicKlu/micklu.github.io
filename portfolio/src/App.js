@@ -121,6 +121,17 @@ export class ListSection extends React.Component {
   }
 }
 
+export function Image(props) {
+  return (
+    <figure id={`image-${props.id}`} className="article-image">
+      <a href={props.src} target="_blank" rel="noreferrer">
+        <img src={props.src} alt={props.caption} />
+      </a>
+      <figcaption>{props.caption}</figcaption>
+    </figure>
+  );
+}
+
 export function Gallery(props) {
   const images = props.imgs.map((img, index) => (
     <figure key={index}>

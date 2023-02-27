@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import "./css/Projects.css";
-import { TextSection, Section, Gallery } from "./App";
+import { TextSection, Section, Gallery, Image } from "./App";
 import { Link, useLoaderData } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -157,6 +157,25 @@ export function Project() {
     }
   }
 
+  if (projectData.images) {
+    const images = content.querySelectorAll("img");
+
+    console.log(images);
+
+    for (const image of images) {
+      const imageData = projectData.images[image.id];
+      if (!imageData) continue;
+
+      image.outerHTML = renderToStaticMarkup(
+        <Image
+          id={image.id}
+          src={`/content/projects/${projectData.id}/${imageData.src}`}
+          caption={imageData.caption}
+        />
+      );
+    }
+  }
+
   let reposList;
 
   if (projectData.repo) {
@@ -205,6 +224,7 @@ export async function projectLoader({ params }) {
       projectData.name = data.name;
       projectData.repo = data.repo;
       projectData.galleries = data.galleries;
+      projectData.images = data.images;
     });
 
   await Promise.all([p1, p2]);
