@@ -3,5 +3,13 @@
   "img": "/content/projects/ch-stats-store-helper/bg.png",
   "desc": "Plugin/modyfikacja do gry Clone Hero v0.23 umożliwiająca zapis wyników w Arkuszach Google.",
   "repo": "clonehero-stats-store-helper",
-  "tags": ["C#"]
+  "tags": [
+    "C#"
+  ],
+  "images": {
+    "bg": {
+      "src": "bg.png",
+      "caption": "Wygenerowany akrusz z wynikami"
+    }
+  }
 }

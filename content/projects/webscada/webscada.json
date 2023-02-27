@@ -15,5 +15,15 @@
         "MySQL",
         "PHP",
         "JavaScript"
-    ]
+    ],
+    "images": {
+        "ws-mb-bg": {
+            "src": "ws-mb-bg.png",
+            "caption": "Przykładowe dane w rejestrach sterownika (symulowane)"
+        },
+        "ws-bg": {
+            "src": "ws-bg.png",
+            "caption": "Wizualizacja danych ze sterownika"
+        }
+    }
 }

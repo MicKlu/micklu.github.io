@@ -9,5 +9,11 @@
         "CSS",
         "JavaScript",
         "jQuery"
-    ]
+    ],
+    "images": {
+        "bg": {
+            "src": "bg.png",
+            "caption": "Strona główna turnieju CS-a"
+        }
+    }
 }

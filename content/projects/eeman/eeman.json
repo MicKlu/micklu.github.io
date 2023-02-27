@@ -3,7 +3,16 @@
   "img": "/content/projects/eeman/bg.png",
   "desc": "Prosta gra platformowa.",
   "repo": "informatyka-projekt",
-  "tags": ["C++", "SFML"],
+  "tags": [
+    "C++",
+    "SFML"
+  ],
+  "images": {
+    "eeman": {
+      "src": "eeman.png",
+      "caption": "Główny bohater gry"
+    }
+  },
   "galleries": {
     "eeman": [
       {

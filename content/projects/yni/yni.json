@@ -11,6 +11,12 @@
         "jQuery"
     ],
     "repo": "skiti",
+    "images": {
+        "bg": {
+            "src": "bg.png",
+            "caption": "Strona główna portalu"
+        }
+    },
     "galleries": {
         "yni": [
             {
